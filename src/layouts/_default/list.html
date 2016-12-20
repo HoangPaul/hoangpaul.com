@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+	<head>
+		<title> {{ .Title }} &middot; {{ .Site.Title }} </title>
+
+		{{ partial "head.html" . }}
+	</head>
+
+	<body>
+		{{ partial "header.html" . }}
+		<div class="container wrapper">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<h1 id=>{{ .Title }}</h1>
+				</div>
+			</div>
+			<ul id="post-list" class="row">
+				{{ range .Data.Pages }}
+				<li class="post-list-item-clear col-xs-6 col-sm-4">
+					<div class="post-list-item">
+						<img src="https://placehold.it/400x300" class="img-responsive center-block" />
+						<div class="post-header">
+							<h4 class="post-link"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+							<h4 class="post-date">{{ .Date.Format "Jan 2, 2006" }}</h4>
+						</div>
+					</div>
+				</li>
+				{{ end }}
+
+			</ul>
+			<div class="push"></div>
+		</div>
+		{{ partial "footer.html" . }}
+	</body>
+</html>
