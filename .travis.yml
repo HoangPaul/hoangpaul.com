@@ -6,6 +6,7 @@ install: go get -v github.com/spf13/hugo
 before_script:
   - sudo pip install awscli
 script:
+  - cd src
   - hugo
 deploy:
   provider: s3
