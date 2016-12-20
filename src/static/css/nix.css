@@ -42,7 +42,7 @@ a:focus {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(130, 130, 130, 0.5);
+	background-color: rgba(255, 255, 255, 0.8);
 	padding: 0 5px 0 5px;
 }
 
@@ -73,6 +73,9 @@ a:focus {
 	border-style: solid;
 	border-width: 0 0 3px 0;
 	border-color: #292929;
+}
+.post-list-item img {
+	width: 100%;
 }
 
 .post-comments {

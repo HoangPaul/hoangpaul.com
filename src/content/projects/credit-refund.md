@@ -2,6 +2,7 @@
 title = "Credit Refund"
 date = "2016-12-20T20:13:39+11:00"
 draft = false
+image = "creditrefund.com.au.png"
 
 +++
 

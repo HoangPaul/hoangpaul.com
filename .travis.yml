@@ -10,7 +10,7 @@ script:
   - hugo
 deploy:
   provider: s3
-  access_key_id: "$AWS_ACCESS_KEY"
+  access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_ACCESS_SECRET_KEY"
   bucket: "hoangpaul.com"
   skip_cleanup: true
@@ -18,7 +18,7 @@ deploy:
   upload-dir: src/public
 after_deploy: |
   aws configure set preview.cloudfront true && \
-  aws cloudfront create-invalidation --cli-input-json "{'DistributionId': '$AWS_CLOUDFRONT_ID', 'InvalidationBatch': {'Paths': {'Quantity':2,'Items':['/index.html','/*']},'CallerReference': '`date +%s`'}}"
+  aws cloudfront create-invalidation --distribution-id "$AWS_CLOUDFRONT_ID" --paths /index.html /* 2>&1 > /dev/null
 notifications:
     email:
         on_failure: always
