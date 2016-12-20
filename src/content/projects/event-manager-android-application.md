@@ -1,6 +1,6 @@
 +++
-date = "2016-12-20T16:44:08+11:00"
 title = "Event Manager Android Application"
+date = "2016-12-20T16:44:08+11:00"
 draft = false
 
 +++
