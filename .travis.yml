@@ -1,0 +1,32 @@
+language: go
+install: go get -v github.com/spf13/hugo
+before_script:
+  - pip install awscli
+script:
+  - hugo
+deploy:
+  provider: s3
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_ACCESS_SECRET_KEY"
+  bucket: "hoangpaul.com"
+  skip_cleanup: true
+  region: "ap-southeast-2"
+  upload-dir: src/public
+after_success: |
+  aws cloudfront create-invalidation \
+    --cli-input-json "
+	{
+		DistributionId: '$AWS_CLOUDFRONT_ID',
+		InvalidationBatch: {
+			Paths: {
+				Quantity:2,
+				Items:['/index.html','/*']
+			},
+			CallerReference: '`date +%s`'
+		}
+	}"
+notifications:
+    email:
+        on_failure: always
+
+
