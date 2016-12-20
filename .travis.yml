@@ -1,9 +1,10 @@
 language: go
 go:
   - master
+sudo: required
 install: go get -v github.com/spf13/hugo
 before_script:
-  - pip install awscli
+  - sudo pip install awscli
 script:
   - hugo
 deploy:
