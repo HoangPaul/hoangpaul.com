@@ -19,7 +19,7 @@
 				{{ range .Data.Pages }}
 				<li class="post-list-item-clear col-xs-6 col-sm-4">
 					<div class="post-list-item">
-						<img src="{{ $.Site.BaseURL }}images/{{ with .Params.image }}{{ . }}{{ else }}default.png{{ end }}" class="img-responsive center-block" alt="{{ .Title }}" width="400" height="300" />
+						<img src="{{ $.Site.BaseURL }}/images/{{ with .Params.image }}{{ . }}{{ else }}default.png{{ end }}" class="img-responsive center-block" alt="{{ .Title }}" width="400" height="300" />
 						<div class="post-header">
 							<h4 class="post-link"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
 							<h4 class="post-date">{{ .Date.Format "Jan 2, 2006" }}</h4>
