@@ -1,6 +1,6 @@
 +++
 title = "IntelliBins"
-date = "2016-12-20T20:02:07+11:00"
+date = "2016-12-18T20:02:07+11:00"
 draft = false
 image = "intellibins-webapp.jpg"
 
