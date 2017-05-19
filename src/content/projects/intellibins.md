@@ -2,7 +2,8 @@
 title = "IntelliBins"
 date = "2016-12-18T20:02:07+11:00"
 draft = false
-image = "intellibins-webapp.jpg"
+image = "intellibins/intellibins-webapp.jpg"
+images = ["intellibins/intellibins-webapp.jpg", "intellibins/intellibins-webapp-android.png", "intellibins/intellibins-hardware.jpg", "intellibins/intellibins-bin.jpg"]
 
 +++
 

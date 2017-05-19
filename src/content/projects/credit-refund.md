@@ -2,7 +2,8 @@
 title = "Credit Refund"
 date = "2016-11-01T20:13:39+11:00"
 draft = false
-image = "creditrefund.com.au.png"
+image = "creditrefund/creditrefund.com.au.png"
+images = ["creditrefund/creditrefund.com.au.png", "creditrefund/creditrefund-android.png"]
 
 +++
 

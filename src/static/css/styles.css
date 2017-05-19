@@ -1,0 +1,24 @@
+.post-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+    clear: both;
+}
+
+.post-image {
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.post-images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

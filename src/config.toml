@@ -17,11 +17,11 @@ uglyurls = true
   [[menu.header]]
     name = "projects"
     weight = 0
-    url = "projects.html"
+    url = "/projects.html"
   [[menu.header]]
     name = "contact"
     weight = 2
-    url = "contact.html"
+    url = "/contact.html"
 
 [blackfriday]
    plainIDAnchors = true

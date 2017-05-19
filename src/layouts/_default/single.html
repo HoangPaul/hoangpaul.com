@@ -5,6 +5,8 @@
         <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
 
         {{ partial "head.html" . }}
+
+        <link rel="stylesheet" type="text/css" href="{{ $.Site.BaseURL }}css/styles.css"/>
     </head>
 
     <body>
@@ -17,13 +19,18 @@
             <div class="post-content">
                 {{ .Content }}
             </div>
-            {{ if (isset .Params "nocomments")  }}
-            {{ else }}
-            <div class="post-comments">
-                {{ template "_internal/disqus.html" . }}
-            </div>
+            {{ if .Params.images }}
+                <h2>Images</h2>
+                <div class="post-images">
+                    {{ range .Params.images }}
+                    <div class="post-image">
+                        <a href="{{ $.Site.BaseURL }}/images/{{ . }}" target="_blank">
+                            <img src="{{ $.Site.BaseURL }}/images/{{ . }}" alt="">
+                        </a>
+                    </div>
+                    {{ end }}
+                </div>
             {{ end }}
-            <div class="push"></div>
         </div>
         {{ partial "footer.html" . }}
     </body>
