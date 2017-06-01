@@ -3,7 +3,14 @@ title = "meetthetylers.com"
 date = "2016-08-08T20:13:54+11:00"
 draft = false
 image = "meetthetylers/meetthetylers.com.jpg"
-images = ["meetthetylers/meetthetylers.com.jpg", "meetthetylers/meetthetylers-responsive.png"]
+
+[[images]]
+url = "meetthetylers/meetthetylers.com.jpg"
+caption = "Website screenshot"
+
+[[images]]
+url = "meetthetylers/meetthetylers-responsive.png"
+caption = "Responsive design"
 
 +++
 
@@ -20,3 +27,14 @@ to make content changes easier. The static site generator had the following feat
 * Ability to specify RSVP form target email address.
 
 [<i class="fa fa-github"></i> Static site generator source](https://github.com/HoangPaul/wysiwyg-meetthetylers.com)
+
+### Technologies used
+
+#### For the static site generator
+* Node.js
+* Express
+
+#### For the generated site
+* Bootstrap
+* jQuery
+* AWS (EC2, S3, CloudFront)

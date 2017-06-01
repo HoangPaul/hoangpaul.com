@@ -6,7 +6,7 @@
 
         {{ partial "head.html" . }}
 
-        <link rel="stylesheet" type="text/css" href="{{ $.Site.BaseURL }}css/styles.css"/>
+        <link rel="stylesheet" type="text/css" href="{{ $.Site.BaseURL }}/css/styles.css"/>
     </head>
 
     <body>
@@ -23,9 +23,10 @@
                 <h2>Images</h2>
                 <div class="post-images">
                     {{ range .Params.images }}
-                    <div class="post-image">
-                        <a href="{{ $.Site.BaseURL }}/images/{{ . }}" target="_blank">
-                            <img src="{{ $.Site.BaseURL }}/images/{{ . }}" alt="">
+                    <div class="post-image col-sm-3">
+                        <a href="{{ $.Site.BaseURL }}/images/{{ .url }}" target="_blank">
+                            <img src="{{ $.Site.BaseURL }}/images/{{ .url }}" alt="">
+                            <p>{{ .caption }}</p>
                         </a>
                     </div>
                     {{ end }}

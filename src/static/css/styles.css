@@ -1,7 +1,4 @@
 .post-images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-left: -15px;
@@ -11,14 +8,17 @@
 }
 
 .post-image {
-    width: 20%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
+    position: relative;
 }
 
 .post-images img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+.post-image p {
+    display: block;
+    margin: 0;
+    text-align: center;
 }
