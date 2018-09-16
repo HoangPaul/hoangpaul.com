@@ -8,39 +8,17 @@
 	</head>
 	<body>
 		{{ partial "header.html" . }}
-		<div class="container wrapper">
-			<div class="row">
-				<div class="user-home jumbotron text-center">
-					<h1>{{ .Site.Params.Greetings }}</h1>
-					<p>{{ .Site.Params.About }}</p>
+		<div class="contents">
+			<section class="jumbotron text-center">
+				<div class="container">
+					<h1 class="jumbotron-heading">{{ .Site.Params.Greetings }}</h1>
+					<p class="lead text-muted">{{ .Site.Params.About }}</p>
+					<p>
+						<a href="{{ .Site.BaseURL }}/contact.html" class="btn btn-secondary">Contact</a>
+						<a href="{{ .Site.BaseURL }}/projects.html" class="btn btn-primary">See projects</a>
+					</p>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-12 user-social text-center">
-
-					{{ with .Site.Params.TwitterID }}
-					<a href="https://twitter.com/{{.}}" title="Twitter"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
-					{{ end }}
-					{{ with .Site.Params.GoogleplusID }}
-					<a href="https://plus.google.com/{{.}}/about" title="Google+"><i class="fa fa-google-plus fa-3x" aria-hidden="true"></i></a>
-					{{ end }}
-					{{ with .Site.Params.FacebookID }}
-					<a href="https://facebook.com/{{.}}" title="Facebook"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
-					{{ end }}
-					{{ with .Site.Params.GithubID }}
-					<a href="https://github.com/{{.}}" title="GitHub"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
-					{{ end }}
-					{{ with .Site.Params.LinkedInID }}
-					<a href="http://linkedin.com/in/{{.}}" title="LinkedIn"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
-					{{ end }}
-					{{ with .Site.Params.Email }}
-					<a href="mailto:{{.}}" title="Email"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></a>
-					{{ end }}
-
-
-				</div>
-			</div>
-			<div class="push"></div>
+			</section>
 		</div>
 		{{ partial "footer.html" . }}
 	</body>

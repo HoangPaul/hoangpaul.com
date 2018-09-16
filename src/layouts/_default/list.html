@@ -10,26 +10,21 @@
 	<body>
 		{{ partial "header.html" . }}
 		<div class="container wrapper">
-			<div class="row">
-				<div class="col-xs-12 text-center">
-					<h1 id=>{{ .Title }}</h1>
-				</div>
-			</div>
-			<ul id="post-list" class="row">
+			<h1 class="text-center">{{ .Title }}</h1>
+			<ul class="list-unstyled">
 				{{ range .Data.Pages }}
-				<li class="post-list-item-clear col-xs-6 col-sm-4">
-					<div class="post-list-item">
-						<img src="{{ $.Site.BaseURL }}/images/{{ with .Params.image }}{{ . }}{{ else }}default.png{{ end }}" class="img-responsive center-block" alt="{{ .Title }}" width="400" height="300" />
-						<div class="post-header">
-							<h4 class="post-link"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-							<h4 class="post-date">{{ .Date.Format "Jan 2, 2006" }}</h4>
-						</div>
+				<li class="media my-4">
+					<img src="{{ $.Site.BaseURL }}/images/{{ with .Params.image }}{{ . }}{{ else }}default.png{{ end }}" class="align-self-center mr-3 img-fluid" alt="{{ .Title }}" />
+					<div class="media-body">
+						<h5 class="mt-0"><a href="{{ .Permalink }}">{{ .Title }}</a></h5>
+						<p>{{ .Date.Format "Jan 2, 2006" }} {{ if .Params.DateEnd }} - {{ dateFormat "Jan 2, 2006 " .Params.DateEnd }} {{ end }}</p>
+						{{ if .Params.FlavorText }}
+							<p class="mb-0"> {{ .Params.FlavorText }} </p>
+						{{ end }}
 					</div>
 				</li>
 				{{ end }}
-
 			</ul>
-			<div class="push"></div>
 		</div>
 		{{ partial "footer.html" . }}
 	</body>

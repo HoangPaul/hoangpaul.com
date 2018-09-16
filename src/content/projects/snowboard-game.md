@@ -2,6 +2,7 @@
 date = "2014-10-26T14:13:04+11:00"
 title = "Snowboard game"
 draft = false
+flavorText = "Back when I wanted to become a game dev"
 
 +++
 

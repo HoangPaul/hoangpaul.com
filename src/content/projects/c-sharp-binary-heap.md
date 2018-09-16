@@ -2,6 +2,7 @@
 date = "2015-03-22T14:12:31+11:00"
 title = "C# Binary Heap"
 draft = false
+flavorText = "Created because there weren't any priority queues in the C# standard library"
 
 +++
 

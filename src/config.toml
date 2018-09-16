@@ -1,7 +1,6 @@
 languageCode = "en-au"
 title = "Paul Hoang's website"
 baseurl = "https://hoangpaul.com"
-theme = "hugo-theme-nix"
 uglyurls = true
 
 [params]
@@ -16,13 +15,9 @@ uglyurls = true
 [menu]
   [[menu.header]]
     name = "projects"
-    weight = 0
+    weight = 1
     url = "/projects.html"
   [[menu.header]]
     name = "contact"
-    weight = 2
+    weight = 0
     url = "/contact.html"
-
-[blackfriday]
-   plainIDAnchors = true
-   hrefTargetBlank = true

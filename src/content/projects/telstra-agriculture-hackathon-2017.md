@@ -1,8 +1,9 @@
 +++
-title = "Telstra Innovation Challenge 2017"
+title = "Untitled (Telstra Innovation Challenge 2017)"
 date = "2017-05-08T20:02:07+11:00"
 draft = false
 image = "telstra-agriculture-hackathon-2017/telstra-agriculture-hackathon-2017-single.png"
+flavorText = "I learned that hardware is a completely different beast. I am scarred for life"
 
 [[images]]
 url = "telstra-agriculture-hackathon-2017/telstra-agriculture-hackathon-2017-all.png"

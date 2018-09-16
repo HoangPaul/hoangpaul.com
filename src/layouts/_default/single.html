@@ -5,30 +5,28 @@
         <title> {{ .Title }} &middot; {{ .Site.Title }} </title>
 
         {{ partial "head.html" . }}
-
-        <link rel="stylesheet" type="text/css" href="{{ $.Site.BaseURL }}/css/styles.css"/>
     </head>
 
     <body>
         {{ partial "header.html" . }}
         <div class="container wrapper">
-            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+            <h1 class="mb-0">{{ .Title }}</h1>
             {{ if not .Date.IsZero }}
-            <span class="post-date">{{ .Date.Format "Jan 2, 2006 " }}</span>
+                <p class="mb-4">{{ .Date.Format "Jan 2, 2006 " }} {{ if .Params.DateEnd }} - {{ dateFormat "Jan 2, 2006 " .Params.DateEnd }} {{ end }}</p>
             {{ end }}
-            <div class="post-content">
+            <div>
                 {{ .Content }}
             </div>
             {{ if .Params.images }}
                 <h2>Images</h2>
-                <div class="post-images">
+                <div class="row">
                     {{ range .Params.images }}
-                    <div class="post-image col-sm-3">
-                        <a href="{{ $.Site.BaseURL }}/images/{{ .url }}" target="_blank">
-                            <img src="{{ $.Site.BaseURL }}/images/{{ .url }}" alt="">
-                            <p>{{ .caption }}</p>
-                        </a>
-                    </div>
+                        <div class="post-image col-sm-3">
+                            <a href="{{ $.Site.BaseURL }}/images/{{ .url }}" target="_blank">
+                                <img src="{{ $.Site.BaseURL }}/images/{{ .url }}" alt="" class="img-fluid">
+                                <p>{{ .caption }}</p>
+                            </a>
+                        </div>
                     {{ end }}
                 </div>
             {{ end }}

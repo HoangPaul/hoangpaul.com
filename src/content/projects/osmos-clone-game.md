@@ -2,6 +2,7 @@
 date = "2014-11-20T14:13:22+11:00"
 title = "Osmos-clone Game"
 draft = false
+flavorText = "Toying around with shaders"
 
 +++
 

@@ -3,6 +3,7 @@ title = "meetthetylers.com"
 date = "2016-08-08T20:13:54+11:00"
 draft = false
 image = "meetthetylers/meetthetylers.com.jpg"
+flavorText = "I even got a shoutout from the best-man during his speech (wow!)"
 
 [[images]]
 url = "meetthetylers/meetthetylers.com.jpg"
@@ -16,10 +17,18 @@ caption = "Responsive design"
 
 A [static site for my sister's wedding](https://www.wedding.meetthetylers.com).
 
-## Static Site Generator
+I had written a static site generator in Node.js to generate a static site for my
+sister's wedding.
 
-As part of this project, I had written a static site generator in Node.js
-to make content changes easier. The static site generator had the following features:
+I spent a lot of time on the static site generator. After numerous hacks, I ended up abandoning the
+static site generator and just directly made changes to the static site itself because
+the generator was so unwieldy.
+
+In the end, the static website was well received.
+
+#### Project details
+
+The static site generator had these awesome features:
 
 * Web-based WYSIWYG editor with image manipulation.
 * Ability to preview the changes before deployment.

@@ -1,16 +1,14 @@
 +++
-title = "Parkalot"
+title = "Parkalot (AngelHack Melbourne 2017)"
 date = "2017-05-05T20:02:07+11:00"
 draft = false
 image = "parkalot/parkalot-single.jpeg"
-
+flavorText = "It looks suspiciously like a popular ride-sharing app, but does something completely different"
 [[images]]
 url = "parkalot/parkalot-all.jpeg"
 caption = "Screenshots on using the web application"
 
 +++
-
-## Entry for the AngelHack Melbourne 2017
 
 Team: Paul Hoang, Kenny Yu, Keith Lee, Kevin Vu
 

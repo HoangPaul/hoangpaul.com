@@ -2,6 +2,7 @@
 date = "2013-10-20T14:13:10+11:00"
 title = "RTP Media Server"
 draft = false
+flavorText = "My most ambitious project. I'm proud of this one"
 
 +++
 
