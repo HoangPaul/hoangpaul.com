@@ -1,6 +1,6 @@
 language: go
 go:
-  - master
+  - "1.9"
 sudo: required
 install: go get -v github.com/gohugoio/hugo
 before_script:
