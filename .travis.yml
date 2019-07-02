@@ -4,7 +4,7 @@ go:
   - "1.12.5"
 sudo: required
 install:
-  - pip install awscli
+  - sudo pip install awscli
   - snap install hugo
 script:
   - cd "$TRAVIS_BUILD_DIR/src"
