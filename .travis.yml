@@ -1,10 +1,11 @@
 language: go
+dist: xenial
 go:
-  - "1.9"
+  - "1.12.5"
 sudo: required
-install: go get -v github.com/gohugoio/hugo
-before_script:
-  - sudo pip install awscli
+install:
+  - pip install awscli
+  - snap install hugo
 script:
   - cd "$TRAVIS_BUILD_DIR/src"
   - hugo
